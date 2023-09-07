@@ -1,5 +1,5 @@
 #commom
-opencv-python>=4.1.1
+opencv-python>=4.5.4.58
 numpy<=1.20.0
 torch>=1.8.0
 torchvision
