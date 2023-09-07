@@ -17,4 +17,7 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://truong-xuan-linh:$HF_TOKEN@huggingface.co/spaces/truong-xuan-linh/vietnamese-ocr main
+        run: |
+          wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.19_amd64.deb
+          sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.19_amd64.deb
+          git push --force https://truong-xuan-linh:$HF_TOKEN@huggingface.co/spaces/truong-xuan-linh/vietnamese-ocr main
