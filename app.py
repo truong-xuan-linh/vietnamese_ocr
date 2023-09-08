@@ -4,8 +4,6 @@ import os
 #Trick to not init function multitime
 if "ocr_detector" not in st.session_state:
     print("INIT MODEL")
-    os.system("wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb")
-    os.system("sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb")
     from src.setup import Setup
     Setup().ocr_model_downloader()
     
