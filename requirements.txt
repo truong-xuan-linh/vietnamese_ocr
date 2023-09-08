@@ -7,7 +7,7 @@ unidecode
 Pillow==9.4.0
 PyYAML>=5.3.1
 gdown==4.4.0
-paddlepaddle>=2.3.1
+paddlepaddle==2.4.1
 paddleocr>=2.5.0.3
 vietocr>=0.3.8
 streamlit==1.26.0
