@@ -84,12 +84,12 @@ class OCRDetector:
             
             h = y3 - y1
             scl = max(h//1000,1)
-            font = ImageFont.truetype("./storage/Roboto-Black.ttf", 15*scl)
+            font = ImageFont.truetype("./storage/Roboto-Black.ttf", 22*scl)
             img = cv2.rectangle(img, (int(x1), int(y1)), (int(x3), int(y3)), (0, 255, 0), 1)
             
             img_pil = Image.fromarray(img)
             draw = ImageDraw.Draw(img_pil)
-            draw.text((int(x1), int(y1-h-3)), text["text"], font = font, fill = (51, 51, 255))
+            draw.text((int(x1), int(y1-h//2)), text["text"], font = font, fill = (255, 51, 51))
             img = np.array(img_pil)
             # img = cv2.putText(img, text["text"], (int(x1), int(y1)-3), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (255,0,0), 1)
         return img
